@@ -33,9 +33,9 @@ router.get('/create', checkAuth, (req, res) => {
 // menambah students ke database
 router.post('/create', (req, res) => {
     // mengambil data dari students
-    const { name, courseId } = req.body
+    const { name, CourseId } = req.body
     // membuat students baru
-    models.Student.create({name, courseId}).then(students => {
+    models.Student.create({name, CourseId}).then(students => {
         // redirect ke views => students
         res.redirect('/students')
     }).catch(err => {
