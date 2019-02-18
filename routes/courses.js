@@ -38,11 +38,11 @@ router.post('/create', (req, res) => {
 
 router.get('/delete/:id', checkAuth, (req, res) => {
     // buat variable baru untuk menampung id course yang akan di edit
-    const courseId = req.params.id
+    const CourseId = req.params.id
     // mencari course yang sama dengan id coursenya
     models.Course.findOne({
         where: {
-            id: courseId
+            id: CourseId
         }
     }).then(courses => {
         // menghapus course yang sesuai dengan id yang di ambil
@@ -56,13 +56,13 @@ router.get('/delete/:id', checkAuth, (req, res) => {
 
 router.get('/edit/:id', checkAuth, (req, res) => {
     // membuat variable baru untuk menampung id coursenya
-    const courseId = req.params.id
+    const CourseId = req.params.id
     // mengambil name dari course di databasenya
     const { name } = req.body
     // mencari course yang sama dengan id course yang di pilih
     models.Course.findOne({
         where: {
-            id: courseId
+            id: CourseId
         }
     }).then(courses => {
         // mempassing data course ke views => edit
@@ -75,13 +75,13 @@ router.get('/edit/:id', checkAuth, (req, res) => {
 
 router.post('/edit/:id', (req, res) => {
     // membuat variable baru yang menampung id coursenya
-    const courseId = req.params.id
+    const CourseId = req.params.id
     // membuat variable baru untuk menampung name dari coursenya
     const { name } = req.body
     // mencari course yang sama dengan idnya
     models.Course.findOne({
         where: {
-            id: courseId
+            id: CourseId
         }
     }).then(courses => {
         // merubah name dari coursenya
