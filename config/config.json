@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "db_bootcamp_app",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "ruaqfuifdpkmxu",
+    "password": "9db4169f1b46bd06f48192def74a75f5ac04e7f8310e0707a89fb0d18a39cec5",
+    "database": "dffhkmottacie3",
+    "host": "ec2-23-23-184-76.compute-1.amazonaws.com",
+    "dialect": "postgres"
+  }
+}
